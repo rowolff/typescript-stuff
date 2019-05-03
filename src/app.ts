@@ -9,6 +9,14 @@ function generateRandomId(symbol: ValidSymbol, length: number): string {
   );
 }
 
+function userAlert(): void {
+  alert("Hello!");
+}
+
+function someError(): never {
+  throw new Error("Failed!");
+}
+
 function main() {
   const app = document.getElementById("app");
   setInterval(function() {
