@@ -1,6 +1,7 @@
 type ValidSymbol = "#" | "$";
 
-function generateRandomId(symbol: ValidSymbol, length: number): string {
+function generateRandomId(symbol: ValidSymbol, length?: number): string {
+  length = length || 7;
   return (
     symbol +
     Math.random()
@@ -20,6 +21,8 @@ function someError(): never {
 function main() {
   const app = document.getElementById("app");
   setInterval(function() {
-    app.innerHTML = generateRandomId("#", 7);
+    if (app) {
+      app.innerHTML = generateRandomId("#", 7);
+    }
   }, 1000);
 }
