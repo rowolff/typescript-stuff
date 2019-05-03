@@ -5,6 +5,7 @@
 - js = dynamically typed; while other langs => statically typed
 - js types: number, string, boolean, undefined, null, object, symbol
 - ast: abstract syntax tree (see ast explorer, json view)
+- const bla: number = 1 // means type annotation
 
 - .ts uses inference based on initial assignment
 
@@ -20,5 +21,14 @@
 - in tsconfig
   -- "allowJs": true if we have vanilla js files in our project
   -- "outDir": "./dist" to set the out dir
+  -- "noEmitOnError": true, to block dist creation when ts errors happen
 - tsc (to compile to dist)
 - put source in "src" folder
+
+## Useful type quirks
+
+- const mything: '#' // means the type is literally # and cannot be anything else, it is of type #
+- const mything: "#" | "\$" = "#"; // union type - all piped options are valid
+- using a symbol alias:
+  -- type ValidSymbol = "#" | "\$";
+  -- const symbol: ValidSymbol = "#";
