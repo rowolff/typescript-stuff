@@ -40,3 +40,7 @@
 - const someThing?: number // is an optional (and the same as union type number | undefined)
 - interfaces are compile time only features used for type checking. in the compiled js, interfaces are gone
 - A function signature (or type signature, or method signature) defines input and output of functions or methods. A signature can include: parameters and their types. a return value and type. exceptions that might be thrown or passed back
+
+## classes
+
+- class properties are non-optional in ts!
