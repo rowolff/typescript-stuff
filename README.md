@@ -44,3 +44,4 @@
 ## classes
 
 - class properties are non-optional in ts!
+- static class properties: cannot be accessed by this (as they dont belong to instances of the class)
