@@ -5,6 +5,12 @@ interface GenerateConfig {
   length: number;
 }
 
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+identity("James");
+
 function generateRandomId(symbol: ValidSymbol, length: number): string;
 function generateRandomId(options: GenerateConfig): string;
 function generateRandomId(
