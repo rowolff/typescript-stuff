@@ -46,3 +46,8 @@
 - class properties are non-optional in ts!
 - static class properties: cannot be accessed by this (as they dont belong to instances of the class)
 - classes in ts automatically forming interfaces (which is why "implements" in class definitions refer to the implemented class as an interface)
+- access modifiers:
+  -- everything is public by default
+  -- private can't be accessed anywhere outside the class
+  -- protected can be accessed by classes extending the base class, but not from the outside
+  -- readonly properties can't be modified (it's as using const)

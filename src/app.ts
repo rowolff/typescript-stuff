@@ -1,12 +1,8 @@
 import { generateRandomId } from "./utils";
 
-interface Component {
-  onInit(el: HTMLElement | null): void;
-}
-
-class App implements Component {
-  static id: string = "app";
-  onInit(el: HTMLElement | null): void {
+class App {
+  static readonly id: string = "app";
+  public onInit(el: HTMLElement | null): void {
     setInterval(function() {
       if (el) {
         el.innerHTML = generateRandomId({ symbol: "#", length: 7 });
