@@ -19,11 +19,15 @@
 - yarn add typescript
 - tsc --init
 - in tsconfig
-  -- "allowJs": true if we have vanilla js files in our project
-  -- "outDir": "./dist" to set the out dir
-  -- "noEmitOnError": true, to block dist creation when ts errors happen
+  -- "allowJs": true // if we have vanilla js files in our project
+  -- "outDir": "./dist" // to set the out dir
+  -- "noEmitOnError": true, // to block dist creation when ts errors happen
+  -- "module": "commonjs" // for node, browsers: use webpack
 - tsc (to compile to dist)
 - put source in "src" folder
+- webpack config:
+  -- yarn init -y
+  -- yarn add -D typescript webpack webpack-dev-server webpack-cli awesome-typescript-loader
 
 ## Useful type quirks
 
