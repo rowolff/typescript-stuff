@@ -1,9 +1,11 @@
 type ValidSymbol = "#" | "$";
 
-function generateRandomId(options: {
+interface GenerateConfig {
   symbol: ValidSymbol;
   length: number;
-}): string {
+}
+
+function generateRandomId(options: GenerateConfig): string {
   return (
     options.symbol +
     Math.random()
