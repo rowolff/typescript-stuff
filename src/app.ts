@@ -5,12 +5,24 @@ interface GenerateConfig {
   length: number;
 }
 
-function generateRandomId(options: GenerateConfig): string {
+function generateRandomId(symbol: ValidSymbol, length: number): string;
+function generateRandomId(options: GenerateConfig): string;
+function generateRandomId(
+  optionsOrSymbol: GenerateConfig | ValidSymbol
+): string {
+  if (typeof optionsOrSymbol === "string") {
+    return (
+      optionsOrSymbol +
+      Math.random()
+        .toString(36)
+        .substr(2, length)
+    );
+  }
   return (
-    options.symbol +
+    optionsOrSymbol.symbol +
     Math.random()
       .toString(36)
-      .substr(2, options.length)
+      .substr(2, optionsOrSymbol.length)
   );
 }
 
