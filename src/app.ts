@@ -1,7 +1,16 @@
 import { generateRandomId } from "./utils";
 
+function Component(options: { id: string }) {
+  console.log(options);
+  return (target: any) => {
+    target.id = options.id;
+  };
+}
+
+@Component({
+  id: "app",
+})
 class App {
-  static readonly id: string = "app";
   public onInit(el: HTMLElement | null): void {
     setInterval(function() {
       if (el) {
