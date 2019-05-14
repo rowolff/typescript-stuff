@@ -31,13 +31,3 @@ export function Component(options: { id: string }) {
     target.id = options.id;
   };
 }
-
-export function enumerable(isEnumerable: boolean) {
-  return (
-    target: any,
-    propertyKey: any,
-    propertyDescripter: PropertyDescriptor
-  ) => {
-    propertyDescripter.enumerable = isEnumerable;
-  };
-}

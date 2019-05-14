@@ -1,10 +1,9 @@
-import { generateRandomId, Component, enumerable } from "./utils";
+import { generateRandomId, Component } from "./utils";
 
 @Component({
   id: "app",
 })
 class App {
-  @enumerable(false)
   public onInit(el: HTMLElement | null): void {
     setInterval(function() {
       if (el) {
