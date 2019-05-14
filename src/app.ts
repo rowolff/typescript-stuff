@@ -1,20 +1,11 @@
 import { generateRandomId, Component } from "./utils";
 
-function prop(x: any, name: any) {
-  console.log(x, name);
-}
-
-function param(x: any, name: any, index: any) {
-  console.log(x, name, index);
-}
-
 @Component({
   id: "app",
 })
 class App {
-  @prop
   static version: string;
-  public onInit(@param el: HTMLElement | null): void {
+  public onInit(el: HTMLElement | null): void {
     setInterval(function() {
       if (el) {
         el.innerHTML = generateRandomId({ symbol: "#", length: 7 });
