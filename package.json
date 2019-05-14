@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.126",
     "awesome-typescript-loader": "^5.2.1",
     "typescript": "^3.4.5",
     "webpack": "^4.30.0",
