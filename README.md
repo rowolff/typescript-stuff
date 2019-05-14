@@ -28,6 +28,8 @@
 - webpack config:
   -- yarn init -y
   -- yarn add -D typescript webpack webpack-dev-server webpack-cli awesome-typescript-loader
+- for external javascript dependencies:
+  -- yarn add -D @types/lodash // to get the type information of the libs
 
 ## Useful type quirks
 
