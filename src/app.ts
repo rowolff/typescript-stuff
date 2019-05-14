@@ -1,3 +1,4 @@
+import { random } from "lodash";
 import { generateRandomId, Component } from "./utils";
 
 @Component({
@@ -8,7 +9,7 @@ class App {
   public onInit(el: HTMLElement | null): void {
     setInterval(function() {
       if (el) {
-        el.innerHTML = generateRandomId({ symbol: "#", length: 7 });
+        el.innerHTML = generateRandomId({ symbol: "#", length: random(7, 10) });
       }
     }, 1000);
   }
